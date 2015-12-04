@@ -22,7 +22,7 @@
 ##############################################################################
 {
     'name': 'Sales commissions',
-    'version': '2.0',
+    'version': '8.0.2.0.0',
     'author': 'Pexego, '
               'Savoire-faire linux, '
               'Avanzosc, '
@@ -59,7 +59,10 @@
         # "report/cc_commission_report.xml"
     ],
     "demo": [
-        # 'demo/sale_agent_demo.xml',
+        'demo/sale_agent_demo.xml',
+    ],
+    'test': [
+        'test/sale_commission_demo.yml',
     ],
     "installable": True
 }

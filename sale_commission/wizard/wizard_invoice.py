@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -19,6 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
 from openerp import models, fields, api
 
 
@@ -26,7 +27,8 @@ class SaleCommissionMakeInvoice(models.TransientModel):
     _name = 'sale.commission.make.invoice'
 
     def _default_journal(self):
-        return self.env['account.journal'].search([('type', '=', 'purchase')])[0]
+        return self.env['account.journal'].search(
+            [('type', '=', 'purchase')])[0]
 
     def _default_settlements(self):
         return self.env.context.get('settlement_ids', [])
